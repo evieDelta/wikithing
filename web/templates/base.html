@@ -1,0 +1,35 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html>
+	<head>
+		{{if .Config.CSSUseCDN}}
+			<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-G9DpmGxRIF6tpgbrkZVcZDeIomEU22LgTguPAI739bbKytjPE/kHTK5YxjJAAEXC" crossorigin="anonymous">
+		{{else}}
+			<link rel="stylesheet" href="/static/external/purecss/pure-min.css">
+		{{end}}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>{{.Head.Title}}</title>
+		{{range .Head.Extras}}
+			{{.}}
+		{{end}}
+	</head>
+
+	<header>
+		{{template "headbar"}}
+	</header>
+	<aside>
+		{{range .Sidebar}}
+		<section>
+			<h1>{{.Title}}</h1>
+			{{.Content}}
+		</section>
+		{{end}}
+	</aside>
+	<div>
+		<article>
+			{{.Content}}
+		</article>
+	</div>
+</html>
+{{end}}

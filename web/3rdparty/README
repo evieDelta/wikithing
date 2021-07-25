@@ -1,0 +1,5 @@
+# EXTERNAL/3rd Party
+This directory contains static objects that are included in the final distribution that are made by 3rd party authors
+(eg: css libraries, or 3rd party javascript used within this project)
+
+if you are a curious explorer exploring what lays within the static folder hi, you found me :wave:

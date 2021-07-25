@@ -1,0 +1,9 @@
+{{define "error500"}}
+	<h1>500: Internal Server Error</h1>
+	<p>Something have went wrong</p>
+	{{if .ShowRawError}}
+	<code>
+		{{.RawError}}
+	</code>
+	{{end}}
+{{end}}
